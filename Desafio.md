@@ -1,7 +1,3 @@
-
-git remote add origin https://github.com/lillomat/BrainFood.git
-git push -u origin master
-
 ## Desafio BrainFood </h3>
 #### 1. ¿Qué cervecería produce la cerveza más fuerte según ABV?
 <br>
