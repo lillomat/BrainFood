@@ -1,5 +1,4 @@
 # BrainFood
-Desafio BrainFood
 ## Desafio BrainFood </h3>
 #### 1. ¿Qué cervecería produce la cerveza más fuerte según ABV?
 <br>
