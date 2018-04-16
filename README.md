@@ -29,28 +29,32 @@ for k,v in cervecera_max_abv.items():
 ```
 ###### Result:
 > Cervecera con mayor ABV: Schorschbräu
-
+>
 > Cerveza con mayor ABV: Schorschbräu Schorschbock 57%
 
-1. 2 _Cervecería que produce la cerveza general con mayor ABV_
-<br><br>
+1.2 _Cervecería que produce la cerveza general con mayor ABV_
 Revisar cada empresa de cerveza
-    #Empty dict
-    cervecera_abv = {}
-    for i in np.unique(info_beer.brewery_id):
-        #Ingresar al dict, la empresa de cerveza con su promedio de ABV
-        cervecera_abv[np.unique(info_beer.brewery_name[info_beer.brewery_id == i])[0]] = np.mean(info_beer.beer_abv[info_beer.brewery_id == i])
+```python
+#Empty dict
+cervecera_abv = {}
+for i in np.unique(info_beer.brewery_id):
+  #Ingresar al dict, la empresa de cerveza con su promedio de ABV
+  cervecera_abv[np.unique(info_beer.brewery_name[info_beer.brewery_id == i])[0]] = np.mean(info_beer.beer_abv[info_beer.brewery_id == i])
+```
 Encontrar maximo promedio de ABV
-    #max_mean_abv = max(cervecera_abv.values())
+```python
+max_mean_abv = max(cervecera_abv.values())
+```
 Recorrer arreglo de resultados y imprimir empresa con mayor ABV prom.
-    #for k,v in cervecera_abv.items():
-        #Encontrar dentro del arreglo, mayor ABV promedio
-        if v == max_mean_abv:
-           print('Cervecera con mayor ABV prom: '+k+', promedio de ABV: '+str(v))
-
+```python
+for k,v in cervecera_abv.items():
+  #Encontrar dentro del arreglo, mayor ABV promedio
+  if v == max_mean_abv:
+    print('Cervecera con mayor ABV prom: '+k+', promedio de ABV: '+str(v))
+```
 ##### Result:
-Cervecera con mayor ABV prom: Schorschbräu
-<br>
-Promedio de ABV: 19.2
+> Cervecera con mayor ABV prom: Schorschbräu
+>
+> Promedio de ABV: 19.2
 
 #### 2.	¿Si tuviera que elegir 3 cervezas para recomendar usando sólo estos datos, cuáles elegiría?
