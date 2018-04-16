@@ -107,11 +107,11 @@ for k,v in beer_opinion_quality.items():
 >
 >Recomiendo la cerveza: Pliny The Younger, Cervecera = Russian River Brewing Company
 
-2. Se concluye que el resultado anterior entrega las cervezas con mayor review overall promedio per beerid siempre y cuando existe una cantidad determinada de opiniones: eliminando resultados bias,ej: 5 reviews 5/5. Para calcular este limite de opiniones se uso el sample size: Usando como poblacion el maximo numero de opiniones per beerid y utilizando una porcion del 50%, que conforma un numero conservativo (mayor tamaño muestra), se comparo con una porcion del 20%, en donde cambia solo una de las cervezas escogidas por otra con menor cantidad de opiniones. (248)
+  1. Se concluye que el resultado anterior entrega las cervezas con mayor review overall promedio per beerid, siempre y cuando existe una cantidad determinada de opiniones: eliminando resultados bias,ej: 5 reviews 5/5. Para calcular este limite de opiniones se uso el sample size: Usando como poblacion el maximo numero de opiniones per beerid y utilizando una porcion del 50%, que conforma un numero conservativo (mayor tamaño muestra). Se comparo con una porcion del 20%, en donde cambia solo una de las cervezas escogidas por otra con menor cantidad de opiniones. (248, mayor riesgo:menos opiniones)
 
 ### 3.¿Cuál de los factores (aroma, taste, apperance, palette) es más importante para determinar la calidad general de una cerveza?
 
-Crear train array con toda la información de ('aroma','appearance','paleta','taste')
+Crear train array con toda la información de ('aroma','appearance','palate','taste')
 ```python
 train_features = np.column_stack((info_beer.review_aroma,info_beer.review_appearance,info_beer.review_palate,info_beer.review_taste))
 ```
@@ -215,7 +215,7 @@ for k,v in beer_opinion_style.items():
 ###### Result:
 > Recomiendo beer style: American Double / Imperial Stout
 
-4. Se concluye que el beerstyle American Double / Imperial Stout, compone el Estilo con mayor promedio de aroma y appearance de todos los otros estilos, se utilizo el mismo metodo de la pregunta 2 pero con diferentes factores. Se obtiene las opiniones por beer_style independiente del beer_id, luego se calcula el promedio de los factores appearance y aroma de cada beer_style, finalmente se promedian ambos factores para conseguir el beer_style con mayor nivel de dichos factores. Adicionalmente se calculo mediante Decision Tree una prediccion clasificativa del beer_style,
+4. Se concluye que el beerstyle American Double / Imperial Stout compone el Estilo de cerveza con mayor promedio de aroma y appearance de todos los otros estilos, se utilizo el mismo metodo de la pregunta 2 pero con diferentes factores de analisis. Se obtienen las opiniones por beer_style independiente del beer_id y luego se calcula el promedio de los factores appearance y aroma de cada beer_style, finalmente se promedian ambos factores para conseguir el beer_style con mayor nivel/valor de dichos factores. Adicionalmente se calculo mediante Decision Tree una prediccion clasificativa del beer_style,
 
 ###### Codigo DT
 Creando train array con toda la información de ('aroma','appearance')
