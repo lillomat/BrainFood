@@ -1,31 +1,38 @@
 # Desafio BrainFood
 #### 1. ¿Qué cervecería produce la cerveza más fuerte según ABV?
 <br>
-1. _Cervecería que produce la cerveza especifica más fuerte_
+ _Cervecería que produce la cerveza especifica más fuerte_
 <br><br>
 Clean Nan:
-    #info_beer.beer_abv = info_beer['beer_abv'].fillna(0)
+```python
+info_beer.beer_abv = info_beer['beer_abv'].fillna(0)
+```
 <br>
 Encontrar maximo ABV
-    #max_abv = max(info_beer.beer_abv)
+```python
+max_abv = max(info_beer.beer_abv)
+```
 <br>
 
 
 Recorrer 1.5mill y cruzar cerveceria, cerveza con el maximo encontrado
-    #Empty dict
-    cervecera_max_abv = {}
-    for i in range(0,len(info_beer.brewery_name)):
-    #Comparar con max_abv
-    if max_abv == info_beer[info_beer.columns.values[11]][i]:
-        cervecera_max_abv[info_beer[info_beer.columns.values[1]][i]] = info_beer[info_beer.columns.values[10]][i]
+```python
+#Empty dict
+cervecera_max_abv = {}
+for i in range(0,len(info_beer.brewery_name)):
+  #Comparar con max_abv
+  if max_abv == info_beer[info_beer.columns.values[11]][i]:
+    cervecera_max_abv[info_beer[info_beer.columns.values[1]][i]] = info_beer[info_beer.columns.values[10]][i]
+```
 Recorrer arreglo de resultados
-    #for k,v in cervecera_max_abv.items():
-         print('Cervecera con mayor ABV: '+k+', Cerveza con mayor ABV: '+v)
-
+```python
+for k,v in cervecera_max_abv.items():
+  print('Cervecera con mayor ABV: '+k+', Cerveza con mayor ABV: '+v)
+```
 ###### Result:
-Cervecera con mayor ABV: Schorschbräu
+> Cervecera con mayor ABV: Schorschbräu
 <br>
-Cerveza con mayor ABV: Schorschbräu Schorschbock 57%
+> Cerveza con mayor ABV: Schorschbräu Schorschbock 57%
 
 1. 2 _Cervecería que produce la cerveza general con mayor ABV_
 <br><br>
