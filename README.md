@@ -3,7 +3,7 @@ Desafio BrainFood
 ## Desafio BrainFood </h3>
 #### 1. ¿Qué cervecería produce la cerveza más fuerte según ABV?
 <br>
-1. 1_Cervecería que produce la cerveza especifica más fuerte_
+1. _Cervecería que produce la cerveza especifica más fuerte_
 <br><br>
 Clean Nan:
     #info_beer.beer_abv = info_beer['beer_abv'].fillna(0)
