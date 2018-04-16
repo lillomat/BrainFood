@@ -1,18 +1,16 @@
 # Desafio BrainFood
 #### 1. ¿Qué cervecería produce la cerveza más fuerte según ABV?
-<br>
  _Cervecería que produce la cerveza especifica más fuerte_
-<br><br>
 Clean Nan:
 ```python
 info_beer.beer_abv = info_beer['beer_abv'].fillna(0)
 ```
-<br>
+
 Encontrar maximo ABV
 ```python
 max_abv = max(info_beer.beer_abv)
 ```
-<br>
+
 
 
 Recorrer 1.5mill y cruzar cerveceria, cerveza con el maximo encontrado
@@ -31,7 +29,7 @@ for k,v in cervecera_max_abv.items():
 ```
 ###### Result:
 > Cervecera con mayor ABV: Schorschbräu
-<br>
+
 > Cerveza con mayor ABV: Schorschbräu Schorschbock 57%
 
 1. 2 _Cervecería que produce la cerveza general con mayor ABV_
