@@ -68,6 +68,7 @@ for k,v in cervecera_abv.items():
 
 #%%
 
+
 # 2.	¿Si tuviera que elegir 3 cervezas para recomendar usando sólo estos datos, cuáles elegiría?
 
 ##Metodo 1: usando promedio review_overall como indicador clave,
