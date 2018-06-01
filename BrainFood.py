@@ -1,3 +1,7 @@
+##IGNORE: create kernel 
+##conda create -n brainfood python=3.6
+##source activate brainfood
+##python -m ipykernel install --name brainfood --user
 #Set WorkDir
 import os
 os.getcwd()
